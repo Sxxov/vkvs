@@ -1,0 +1,42 @@
+{
+	"extends": "./.svelte-kit/tsconfig.json",
+	"include": [
+		"src/**/*", 
+		"types/**/*", 
+		"**/.*rc.cjs",
+		"**/*.config.cjs", "vite.config.js",
+	],
+	"exclude": [
+		"node_modules",
+		"public",
+	],
+	"compilerOptions": {
+		"typeRoots": [
+			"node_modules/@types",
+		],
+		"types": [
+			"svelte",
+			"@sveltejs/kit",
+			"maic",
+		],
+		"lib": [
+			"esnext",
+			"dom",
+		],
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"module": "esnext",
+		"target": "es2021",
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"noEmit": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"useDefineForClassFields": false,
+		"allowSyntheticDefaultImports": true,
+		"importsNotUsedAsValues": "error",
+		"experimentalDecorators": true,
+		"noImplicitOverride": true,
+	}
+}

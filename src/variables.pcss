@@ -1,0 +1,168 @@
+/* stylelint-disable at-rule-no-unknown */
+
+:root {
+	/* —————————————————————————————————colours—————————————————————————————————— */
+	@define-mixin colour-variables-light {
+		--colour-background-transparent: #f1f5f900;
+		--colour-background-primary: #d8dee6;
+		--colour-background-secondary: #e2e8f0;
+		--colour-background-tertiary: #f1f5f9;
+		--colour-accent-transparent: #ffa4aa00;
+		--colour-accent-primary: #ffa4aa;
+		--colour-accent-secondary: #ffa4aa33;
+		--colour-text-transparent: #11182700;
+		--colour-text-primary: #111827;
+		--colour-text-secondary: #1f2937;
+		--colour-text-tertiary: #1f293733;
+		--colour-overlay: #0003;
+	}
+
+	@define-mixin colour-variables-dark {
+		--colour-background-transparent: #11182700;
+		--colour-background-primary: #111827;
+		--colour-background-secondary: #1f2937;
+		--colour-background-tertiary: #2c384a;
+		--colour-accent-transparent: #ffa4aa00;
+		--colour-accent-primary: #ffa4aa;
+		--colour-accent-secondary: #ffa4aa33;
+		--colour-text-transparent: #f1f5f900;
+		--colour-text-primary: #f1f5f9;
+		--colour-text-secondary: #adb5c1;
+		--colour-text-tertiary: #e2e8f033;
+		--colour-overlay: #0008;
+	}
+
+	/* —————————————————————————————————shadows—————————————————————————————————— */
+	@define-mixin shadow-variables-light {
+		--shadow-sm:
+			1px 1px 2px 0 rgb(17 24 39 / 3%),
+			-1px -1px 2px 0 rgb(255 255 255 / 25%);
+		--shadow-md:
+			2px 4px 4px -1px rgb(17 24 39 / 6%),
+			-2px -4px 4px -1px rgb(255 255 255 / 25%);
+		--shadow-lg:
+			4px 8px 8px -1px rgb(17 24 39 / 6%),
+			-4px -8px 8px -1px rgb(255 255 255 / 30%);
+		--shadow-xl:
+			8px 16px 16px -1px rgb(17 24 39 / 8%),
+			-8px -16px 16px -1px rgb(255 255 255 / 35%);
+		--shadow-2xl:
+			12.5px 25px 25px -3px rgb(17 24 39 / 8%),
+			-12.5px -25px 25px -3px rgb(255 255 255 / 35%);
+		--shadow-3xl:
+			17.5px 35px 35px -5px rgb(17 24 39 / 8%),
+			-17.5px -35px 35px -5px rgb(255 255 255 / 35%);
+		--shadow-none:
+			0 0 0 0 rgb(17 24 39 / 5%),
+			0 0 0 0 rgb(255 255 255 / 20%);
+		--shadow-inner-sm:
+			inset 1px 1px 2px 0 rgb(17 24 39 / 5%),
+			inset -1px -1px 2px 0 rgb(255 255 255 / 20%);
+		--shadow-inner-md:
+			inset 2px 2px 16px -1px rgb(17 24 39 / 16%),
+			inset -2px -2px 16px -1px rgb(255 255 255 / 42%);
+		--shadow-inner-lg:
+			inset 5px 5px 25px -3px rgb(17 24 39 / 15%),
+			inset -5px -5px 25px -3px rgb(255 255 255 / 40%);
+		--shadow-inner-xl:
+			inset 10px 10px 35px -5px rgb(17 24 39 / 14%),
+			inset -10px -10px 35px -5px rgb(255 255 255 / 38%);
+		--shadow-inner-2xl:
+			inset 12.5px 12.5px 60px -12px rgb(17 24 39 / 25%),
+			inset -12.5px -12.5px 60px -12px rgb(255 255 255 / 60%);
+		--shadow-inner-3xl:
+			inset 17.5px 17.5px 70px -15px rgb(17 24 39 / 30%),
+			inset -17.5px -17.5px 70px -15px rgb(255 255 255 / 70%);
+		--shadow-inner-none:
+			inset 0 0 0 0 rgb(17 24 39 / 5%),
+			inset 0 0 0 0 rgb(255 255 255 / 20%);
+	}
+
+	@define-mixin shadow-variables-dark {
+		--shadow-sm:
+			1px 1px 2px 0 rgb(0 0 0 / 30%),
+			-1px -1px 2px 0 rgb(241 245 249 / 10%);
+		--shadow-md:
+			2px 2px 16px -1px rgb(0 0 0 / 52%),
+			-2px -2px 16px -1px rgb(241 245 249 / 16%);
+		--shadow-lg:
+			5px 5px 25px -3px rgb(0 0 0 / 50%),
+			-5px -5px 25px -3px rgb(241 245 249 / 16%);
+		--shadow-xl:
+			10px 10px 35px -5px rgb(0 0 0 / 58%),
+			-10px -10px 35px -5px rgb(241 245 249 / 16%);
+		--shadow-2xl:
+			12.5px 12.5px 60px -12px rgb(0 0 0 / 70%),
+			-12.5px -12.5px 60px -12px rgb(241 245 249 / 25%);
+		--shadow-3xl:
+			17.5px 17.5px 70px -15px rgb(0 0 0 / 80%),
+			-17.5px -17.5px 70px -15px rgb(241 245 249 / 30%);
+		--shadow-none:
+			0 0 0 0 rgb(0 0 0 / 10%),
+			0 0 0 0 rgb(241 245 249 / 5%);
+		--shadow-inner-sm:
+			inset 1px 1px 2px 0 rgb(0 0 0 / 10%),
+			inset -1px -1px 2px 0 rgb(241 245 249 / 5%);
+		--shadow-inner-md:
+			inset 2px 2px 16px -1px rgb(0 0 0 / 32%),
+			inset -2px -2px 16px -1px rgb(241 245 249 / 16%);
+		--shadow-inner-lg:
+			inset 5px 5px 25px -3px rgb(0 0 0 / 30%),
+			inset -5px -5px 25px -3px rgb(241 245 249 / 15%);
+		--shadow-inner-xl:
+			inset 10px 10px 35px -5px rgb(0 0 0 / 28%),
+			inset -10px -10px 35px -5px rgb(241 245 249 / 14%);
+		--shadow-inner-2xl:
+			inset 12.5px 12.5px 60px -12px rgb(0 0 0 / 50%),
+			inset -12.5px -12.5px 60px -12px rgb(241 245 249 / 25%);
+		--shadow-inner-3xl:
+			inset 17.5px 17.5px 70px -15px rgb(0 0 0 / 60%),
+			inset -17.5px -17.5px 70px -15px rgb(241 245 249 / 30%);
+		--shadow-inner-none:
+			inset 0 0 0 0 rgb(0 0 0 / 10%),
+			inset 0 0 0 0 rgb(241 245 249 / 5%);
+	}
+
+	/* ——————————————————————————————font families——————————————————————————————— */
+	--font-family-display: 'Space Mono', monospace;
+	--font-family-sans: 'Space Grotesk', sans-serif;
+
+	/* —————————————————————————————————easings—————————————————————————————————— */
+	--ease-fast-slow: cubic-bezier(0.075, 0.82, 0.165, 1);
+	--ease-slow-slow: cubic-bezier(0.77, 0, 0.175, 1);
+	--ease-slow-fast: cubic-bezier(0.5, 0, 0.75, 0);
+
+	/* —————————————————————————————————layout——————————————————————————————————— */
+	--padding: max(min(8%, 80px), 36px);
+	--roundness: 14px;
+
+	/* ———————————————————————————————light/dark————————————————————————————————— */
+
+	@define-mixin light {
+		@mixin colour-variables-light;
+		@mixin shadow-variables-light;
+	}
+
+	@define-mixin dark {
+		@mixin colour-variables-dark;
+		@mixin shadow-variables-dark;
+	}
+
+	@mixin light;
+
+	@media (prefers-color-scheme: light) {
+		@mixin light;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		@mixin dark;
+	}
+
+	&.light {
+		@mixin light;
+	}
+
+	&.dark {
+		@mixin dark;
+	}
+}

@@ -1,0 +1,39 @@
+@media screen and (hover: hover) and (pointer: fine) {
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-button {
+		width: 0;
+		height: 0;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: var(--colour-text-primary);
+		border-radius: var(--roundness);
+
+		border: solid 4px var(--colour-background-primary);
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--colour-text-secondary);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: var(--colour-accent-primary);
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--colour-background-primary);
+		border-radius: var(--roundness);
+	}
+
+	body::-webkit-scrollbar-track {
+		border-radius: 0;
+	}
+
+	::-webkit-scrollbar-corner {
+		background: transparent;
+	}
+}
