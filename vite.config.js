@@ -15,6 +15,9 @@ const dirname = path.dirname(filename);
 
 export default {
 	assetsInclude: ['**/*.glb', '**/*.gltf'],
+	build: {
+		target: 'esnext',
+	},
 	plugins: [
 		alias({
 			entries: [
